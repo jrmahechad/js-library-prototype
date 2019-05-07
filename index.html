@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    height: 20px;
+    margin: 20px;
+    color: white;
+  }
+
+  .filter {
+    background: red;
+  }
+
+  .search {
+    background: blue
+  }
+</style>
+
+<body>
+  <div class="filter"></div>
+  <div class="filter"></div>
+  <div class="search">
+    <input class="search__input" type="text">
+  </div>
+  <div class="search">
+    <input class="search__input" type="text">
+  </div>
+  <script src="index.js"></script>
+  <script>
+    /** page.js */
+    let inputs = document.getElementsByClassName('search__input')
+    for (const input of inputs) {
+      input.addEventListener('custom-keyup', (e) => {
+        console.log(e)
+      })
+    }
+  </script>
+</body>
+
+</html>
